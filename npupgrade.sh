@@ -2,6 +2,7 @@
 set -e
 
 # built-in
+# https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token#get-a-token-using-curl
 RESOURCE=https%3A%2F%2Fmanagement.azure.com%2F
 API_VERSION=2020-09-01
 
@@ -88,7 +89,6 @@ EOF
 }
 
 upgrade() {
-  # echo $0 $1
   envCheck
   echo "--- Upgrade in progress.. ---"
 
@@ -108,7 +108,6 @@ upgrade() {
 }
 
 status() {
-  # echo $0 $1
   envCheck
   echo "--- Checking status.. ---"
 
