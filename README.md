@@ -54,6 +54,12 @@ $ ./npupgrade.sh status demopool
 --- Checking status.. ---
 Cluster Provisioning State is Succeeded
 Node Pool Provisioning State is Upgrading
+
+$ az aks nodepool list --cluster-name $CLUSTER_NAME --resource-group $RESOURCE_GROUP_NAME --output table
+Name       OsType    VmSize        Count    MaxPods    ProvisioningState    Mode
+---------  --------  ------------  -------  ---------  -------------------  ------
+agentpool  Linux     Standard_B2s  1        110        Succeeded            System
+demopool   Linux     Standard_B2s  1        110        Upgrading            User
 ```
 ![upgrade](./img/upgrade.png)
 
