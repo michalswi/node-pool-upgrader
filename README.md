@@ -6,8 +6,11 @@ Simple script to upgrade AKS Node Pools.
 Node Pools Kubernetes version can't be higher that Control Plane Kubernetes version.
 
 ```
-$ kubectl version
+> Control Plane K8s version
+$ kubectl version --short | grep -i server
+Server Version: v1.21.1
 
+> Node Pools K8s version
 $ kubectl get nodes
 NAME                                STATUS   ROLES   AGE   VERSION
 aks-agentpool-21878470-vmss000000   Ready    agent   44m   v1.20.7
