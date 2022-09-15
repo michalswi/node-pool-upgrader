@@ -23,6 +23,9 @@ export ARM_SUBSCRIPTION_ID=<>
 export RESOURCE_GROUP_NAME=<> ;\
 export CLUSTER_NAME=<> ;\
 export KUBERNETES_NODE_VERSION=<>
+
+> more details (help)
+$ ./npupgrade.sh
 ```
 
 #### **\# upgrade**
@@ -30,7 +33,7 @@ export KUBERNETES_NODE_VERSION=<>
 ```
 $ az aks list --output table
 
-$ az aks nodepool list --cluster-name demo-k8s --resource-group demo-rg --output table
+$ az aks nodepool list --cluster-name $CLUSTER_NAME --resource-group $RESOURCE_GROUP_NAME --output table
 Name       OsType    VmSize        Count    MaxPods    ProvisioningState    Mode
 ---------  --------  ------------  -------  ---------  -------------------  ------
 agentpool  Linux     Standard_B2s  1        110        Succeeded            System
